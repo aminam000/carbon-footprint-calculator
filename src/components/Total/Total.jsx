@@ -1,4 +1,4 @@
-function Residence(){
+function Total(){
 
 
 
@@ -9,4 +9,4 @@ function Residence(){
     )
 };
 
-export default Residence;
+export default Total;

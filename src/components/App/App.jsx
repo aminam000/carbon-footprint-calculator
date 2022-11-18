@@ -88,7 +88,14 @@ function App() {
 
           </ProtectedRoute>
 
-    
+          <ProtectedRoute
+  
+            exact
+            path="/Calendar"
+          >
+            <Calendar />
+
+          </ProtectedRoute>   
 
           <Route
             exact
