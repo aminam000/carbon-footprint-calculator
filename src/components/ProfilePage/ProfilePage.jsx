@@ -9,6 +9,11 @@ function ProfilePage() {
   return (
     <div className="container">
       <p>Profile</p>
+      <button>Edit Profile</button>
+      <p> I drive a: </p>
+      <p> I live in a(n): </p>
+      <p> I live __ away from my job </p>
+      <p> I am a vegetarian </p>
     </div>
   );
 }

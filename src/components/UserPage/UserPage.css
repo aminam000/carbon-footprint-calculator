@@ -1,4 +1,4 @@
-.profile-pic {
+/* .profile-pic {
   color: transparent;
   transition: all 0.3s ease;
   display: flex;
@@ -41,7 +41,7 @@
   height: 2em;
 }
 /* ///////////////////////// // Body styling 🐾 /////////----------> */
-body {
+/* body {
   height: 100vh;
   background-color: #191815;
   display: flex;
@@ -50,4 +50,4 @@ body {
 }
 body a:hover {
   text-decoration: none;
-}
+} */ 

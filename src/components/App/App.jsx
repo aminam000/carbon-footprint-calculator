@@ -22,6 +22,7 @@ import RegisterPage from '../RegisterPage/RegisterPage';
 import ProfilePage from '../ProfilePage/ProfilePage';
 
 import './App.css';
+import CreateCalculation from '../CreateCalculation/CreateCalculation';
 
 function App() {
   const dispatch = useDispatch();
@@ -68,6 +69,26 @@ function App() {
           >
             <InfoPage />
           </ProtectedRoute>
+
+          <ProtectedRoute
+  
+            exact
+            path="/profile"
+          >
+            <ProfilePage />
+
+          </ProtectedRoute>
+
+          <ProtectedRoute
+  
+            exact
+            path="/CreateCalculation"
+          >
+            <ProfilePage />
+
+          </ProtectedRoute>
+
+    
 
           <Route
             exact
