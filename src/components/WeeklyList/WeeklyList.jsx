@@ -1,12 +1,12 @@
-function WeeklyList(){
+// function WeeklyList(){
 
 
 
-    return(
-        <>
+//     return(
+//         <>
         
-        </>
-    )
-};
+//         </>
+//     )
+// };
 
-export default WeeklyList;
+// export default WeeklyList;

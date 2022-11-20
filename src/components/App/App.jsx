@@ -19,10 +19,13 @@ import InfoPage from '../InfoPage/InfoPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
+import CreateCalculation from '../CreateCalculation/CreateCalculation';
 import ProfilePage from '../ProfilePage/ProfilePage';
+import Vehicles from '../Vehicles/Vehicles';
+import Residence from '../Residence/Residence';
 
 import './App.css';
-import CreateCalculation from '../CreateCalculation/CreateCalculation';
+
 
 function App() {
   const dispatch = useDispatch();
@@ -69,7 +72,13 @@ function App() {
           >
             <InfoPage />
           </ProtectedRoute>
-
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/calculate"
+          >
+            <CreateCalculation />
+          </ProtectedRoute>
           <ProtectedRoute
   
             exact
@@ -78,24 +87,23 @@ function App() {
             <ProfilePage />
 
           </ProtectedRoute>
-
           <ProtectedRoute
   
             exact
-            path="/CreateCalculation"
+            path="/vehicle"
           >
-            <ProfilePage />
+            <Vehicles /> 
 
           </ProtectedRoute>
 
           <ProtectedRoute
   
             exact
-            path="/Calendar"
+            path="/residence"
           >
-            <Calendar />
+            <Residence />
 
-          </ProtectedRoute>   
+          </ProtectedRoute> 
 
           <Route
             exact

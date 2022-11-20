@@ -1,12 +1,12 @@
-function Total(){
+// function Total(){
 
 
 
-    return(
-        <>
+//     return(
+//         <>
         
-        </>
-    )
-};
+//         </>
+//     )
+// };
 
-export default Total;
+// export default Total;

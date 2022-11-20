@@ -1,12 +1,12 @@
-function Meals(){
+// function Meals(){
 
 
 
-    return(
-        <>
+//     return(
+//         <>
         
-        </>
-    )
-};
+//         </>
+//     )
+// };
 
-export default Meals;
+// export default Meals;

@@ -8,7 +8,9 @@ import React from 'react';
 function InfoPage() {
   return (
     <div className="container">
-      <p>Info Page</p>
+      <h1>Info Page</h1>
+      <p>This carbon footprint uses </p>
+
     </div>
   );
 }

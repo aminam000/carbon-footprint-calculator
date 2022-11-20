@@ -1,24 +1,12 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+
 
 function CreateCalculation(props) {
     const dispatch = useDispatch();
-    const history = useHistory(); 
+    // const history = useHistory(); 
 
-    const [info, setInfo] = useState('') 
-
-    const fetchComments = (evt) => {
-        evt.preventDefault();
-
-        console.log('This is the stuff from the database', )
-
-        // dispatch({
-        //     type: 'CALCULATE',
-        //     payload: 
-        // })
-
-        history.push('/calculate');
-    }
 
   return (
     <button
