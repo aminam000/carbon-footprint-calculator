@@ -19,10 +19,20 @@ import InfoPage from '../InfoPage/InfoPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
+import Calculate from '../Calculate/Calculate';
 import CreateCalculation from '../CreateCalculation/CreateCalculation';
 import ProfilePage from '../ProfilePage/ProfilePage';
+import WeeklyItem from '../WeeklyItem/WeeklyItem';
+import WeeklyList from '../WeeklyList/WeeklyList';
 import Vehicles from '../Vehicles/Vehicles';
 import Residence from '../Residence/Residence';
+import Transport from '../Transport.jsx/Transport';
+import Distance from '../Distance/Distance';
+import WorkTransport from '../WorkTransport/WorkTransport';
+import Meals from '../Meals/Meals';
+import Shopping from '../Shopping/Shopping';
+import Takeout from '../Takeout/Takeout';
+import Flights from '../Flights/Flights';
 
 import './App.css';
 
@@ -75,10 +85,97 @@ function App() {
           <ProtectedRoute
             // logged in shows InfoPage else shows LoginPage
             exact
-            path="/calculate"
+            path="/Calculate"
+          >
+            <Calculate />
+  
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/CreateCalculate"
           >
             <CreateCalculation />
+  
           </ProtectedRoute>
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/Residence"
+          >
+            <Residence />
+  
+          </ProtectedRoute>
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/Vehicles"
+          >
+            <Vehicles />
+  
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/Transport"
+          >
+            <Transport />
+  
+          </ProtectedRoute>
+
+
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/Distance"
+          >
+            <Distance />
+  
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/WorkTransport"
+          >
+            <WorkTransport />
+  
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/Meals"
+          >
+            <Meals /> 
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/Shopping"
+          >
+            <Shopping /> 
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/Takeout"
+          >
+            <Takeout /> 
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/Flights"
+          >
+            <Flights /> 
+          </ProtectedRoute>
+
           <ProtectedRoute
   
             exact
@@ -87,7 +184,33 @@ function App() {
             <ProfilePage />
 
           </ProtectedRoute>
+          {/* <ProtectedRoute
+  
+            exact
+            path="/calendar"
+          >
+            <Calendar /> */}
+{/* 
+          </ProtectedRoute> */}
+
           <ProtectedRoute
+  
+            exact
+            path="/WeeklyList"
+          >
+            <WeeklyList />
+
+          </ProtectedRoute>
+
+          <ProtectedRoute
+  
+            exact
+            path="/WeeklyItem"
+          >
+            <WeeklyItem />
+
+          </ProtectedRoute>
+          {/* <ProtectedRoute
   
             exact
             path="/vehicle"
@@ -103,7 +226,7 @@ function App() {
           >
             <Residence />
 
-          </ProtectedRoute> 
+          </ProtectedRoute>  */}
 
           <Route
             exact

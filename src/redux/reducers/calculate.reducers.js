@@ -1,9 +1,10 @@
-const calculate = (state = [], action) => {
-    if (action.type === 'CALCULATE') {
-        return action.payload
+const calcReducer = (state = [], action) => {
+    switch (action.type) {
+        case 'SET_DATA':
+            return action.payload;
+        default:
+            return state;
     }
-    return state;
-  }
+};
 
-
-  export default calculate;
+export default calcReducer;

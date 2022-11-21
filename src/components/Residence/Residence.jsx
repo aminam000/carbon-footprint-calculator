@@ -21,18 +21,18 @@ function Residence(){
     return(
         <section>
         <header>
-            <h1>How well are you understanding the content?</h1>
-            <p>Understanding?</p>
+            <h1></h1>
+            <p></p>
 
                 <form onSubmit={getResidence}>
 
                     <input type='text'
                         required placeholder='residence'
                         
-                        value={rating}
+                        value={residence}
                         onChange={(evt)=> setResidence(evt.target.value)}>
                         </input>
-                        <button type='submitBtn'>Add To Profile</button>
+                        <button type='submitBtn'>Next</button>
                 </form>
             </header>
 

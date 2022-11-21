@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-
+import CreateCalculation from '../CreateCalculation/CreateCalculation';
 
 import Typography from '@mui/material/Typography';
 
@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 function Calculate() {
     const dispatch = useDispatch();
     const history = useHistory();
-    const weeks = useSelector(store=>store.insertReducer)
+    const weeks = useSelector(store=>store.calcReducer)
 
     const currentWeek = (event) => {
       const week = event.target.getAttribute ('week');
@@ -23,14 +23,18 @@ function Calculate() {
           },
           
         });
-        history.push('/CurrentData')
-console.log('searchReducer------>',weeks)
+        history.push('/C')
+console.log('calcReducer------>',weeks)
     }
 
     
     return(
         <>
-        <Search />
+        <h1>Welcome to Big Foot</h1>
+        <p>Big Foot uses information about your daily living habits to calculate your carbon footprint. Keep track of your weekly carbon emissions and calculate your carbon footprint for the week by answering the questions below. </p>
+        <button> Next </button>
+        
+        {/* <CreateCalculation />
         <div> 
           {weeks && 
           weeks.map((item)=>{
@@ -65,7 +69,7 @@ console.log('searchReducer------>',weeks)
           })
           }
 
-        </div>
+        </div> */}
         </>
     )
 }

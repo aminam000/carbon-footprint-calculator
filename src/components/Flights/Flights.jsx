@@ -1,12 +1,12 @@
-// function Flights(){
+function Flights(){
 
 
 
-//     return(
-//         <>
+    return(
+        <>
         
-//         </>
-//     )
-// };
+        </>
+    )
+};
 
-// export default Flights;
+export default Flights;
