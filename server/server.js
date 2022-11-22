@@ -4,14 +4,17 @@ require('dotenv').config();
 const router = express.Router();
 const axios = require('axios');
 
+
 const app = express();
 
 const sessionMiddleware = require('./modules/session-middleware');
 const passport = require('./strategies/user.strategy');
 
 // Route includes
+const valuerouter = require('./routes/value.routes')
 const userRouter = require('./routes/user.router');
-const calcRouter = require('./routes/calculated.router');
+// const calcRouter = require('./routes/calculated.router');
+// const choiceRouter = require('./routes/choices.router')
 // Body parser middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -28,8 +31,9 @@ app.use(passport.session());
 
 /* Routes */
 app.use('/api/user', userRouter);
-app.use('/api/calculate', calcRouter);
-
+// app.use('/api/calculate', calcRouter);
+// app.use('/api/:choices', choiceRouter);
+app.use('/values', valuerouter);
 // Serve static files
 app.use(express.static('build'));
 

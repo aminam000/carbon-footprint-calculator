@@ -3,6 +3,14 @@ import errors from './errors.reducer';
 import user from './user.reducer';
 import residence from './residence.reducer';
 import calculate from './calculate.reducers';
+import shop from './shop.reducer';
+import distance from './distance.reducer';
+import flights from './flights.reducer';
+import meat from './meat.reducer';
+import othertrips from './othertrips.reducer';
+import takeout from './takeout.reducer';
+import vehicle from './vehicle.reducer';
+import worktrip from './worktrip.reducer';
 
 
 // rootReducer is the primary reducer for our entire project
@@ -16,6 +24,14 @@ const rootReducer = combineReducers({
   user, // will have an id and username if someone is logged in
   residence,
   calculate,
+  shop,
+  distance,
+  flights,
+  meat,
+  othertrips,
+  takeout,
+  vehicle,
+  worktrip,
 });
 
 export default rootReducer;

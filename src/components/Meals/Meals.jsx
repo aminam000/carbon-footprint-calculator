@@ -21,7 +21,7 @@ function Meals () {
             type: 'GET_MEAT',
             payload: meat
         })
-        history.push('/shop')
+        history.push('/takeout')
     }
 
     const handleChange = (event) => {
@@ -29,21 +29,21 @@ function Meals () {
       };
 
     return (
-        <section>
+        
 
-            <header>
 
-            <h1>Which of these choices best describe your meal habits</h1>
-            <p></p>
+          
             <Box sx={{ minWidth: 120 }}>
+          <h2>Which of these choices best describe your meal habits?</h2>
+          <form onSubmit={getMeat}>
       <FormControl fullWidth>
-        <InputLabel id="Meat">Select From Options</InputLabel>
+      <InputLabel id="demo-simple-select-label">Select</InputLabel>
         <Select
-          labelId="MeatId"
+          labelId="demo-simple-select-label"
           id="demo-simple-select"
           value={meat}
           label="meat"
-          onChange={handleChange}
+          onChange={(evt)=> setMeat(evt.target.value)}
         >
           <MenuItem value={10}>Omnivorous</MenuItem>
           <MenuItem value={20}>Vegetarian</MenuItem>
@@ -52,12 +52,11 @@ function Meals () {
   
         </Select>
       </FormControl>
+      <button type='submit'>Next</button>
+        </form>
     </Box>
 
 
-            </header>
-
-        </section>
     ) 
 }
 export default Meals;

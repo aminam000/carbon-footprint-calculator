@@ -21,7 +21,7 @@ function Submit() {
 
     return (
         <>
-        <h1>Thank you using Big Foot!</h1>
+        <h1>Thank you for using Big Foot!</h1>
         
         <button onClick={homePage}>Start A New Calculation</button>
         </>

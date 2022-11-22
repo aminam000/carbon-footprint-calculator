@@ -33,6 +33,8 @@ import Meals from '../Meals/Meals';
 import Shopping from '../Shopping/Shopping';
 import Takeout from '../Takeout/Takeout';
 import Flights from '../Flights/Flights';
+import Total from '../Total/Total';
+import ReviewAnswers from '../ReviewAnswers/ReviewAnswers';
 
 import './App.css';
 
@@ -107,10 +109,20 @@ function App() {
             <Residence />
   
           </ProtectedRoute>
+
           <ProtectedRoute
             // logged in shows InfoPage else shows LoginPage
             exact
-            path="/Vehicles"
+            path="/Review"
+          >
+            <ReviewAnswers />
+  
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/Vehicle"
           >
             <Vehicles />
   
@@ -174,6 +186,14 @@ function App() {
             path="/Flights"
           >
             <Flights /> 
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/total"
+          >
+            <Total /> 
           </ProtectedRoute>
 
           <ProtectedRoute
