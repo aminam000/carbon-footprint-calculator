@@ -65,9 +65,9 @@ function Transport(){
             <MenuItem value={3}>Plug-In Hybrid Car</MenuItem>
             <MenuItem value={4}>Electric Car</MenuItem>
            <MenuItem value={5}>Motorbike</MenuItem>
-           <MenuItem value={7}>Public Transport</MenuItem>
-        <MenuItem value={6}>Bike</MenuItem>
-        <MenuItem value={7}>Walking</MenuItem>
+           <MenuItem value={6}>Public Transport</MenuItem>
+        <MenuItem value={7}>Bike</MenuItem>
+        <MenuItem value={8}>Walking</MenuItem>
 
         </Select>
         </FormControl>

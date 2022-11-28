@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import './ReviewAnswer.css'
 
 import { useSelector } from 'react-redux';
 
@@ -83,12 +84,36 @@ return (
     <>
     <div>
         <h1>Review your submissions</h1>
-        <h3>I live in a(n): {residence}</h3>
-        <h3>I drive a(n): {vehicle}</h3>
+        <h3>I live in a(n): {residence === 10 ? <p>apartment</p>
+      :
+     <></>
+    } 
+    {residence === 20 ?
+       <p>House</p>
+      :
+     <></>
+    } 
+  </h3>
+        <h3>I drive a(n): {vehicle === 1 ?
+       <p>Conventional Car</p>
+      :
+     <></>
+    }</h3>
         <h3>I live {distance} miles away from my job</h3>
-        <h3>I am {meat}</h3>
-        <h3>I've eaten out {takeout} times this week</h3>
-        <h3>{shop}</h3>
+        <h3>I am {meat === 30 ? <p>Plant Based</p>
+      :
+     <></>
+    }</h3>
+        <h3>I've eaten out {takeout === 30 ?
+       <p>3-6 times</p>
+      :
+     <></>
+    } times this week</h3>
+        <h3>{shop === 3 ?
+       <p>I shopped local and thrifty</p>
+      :
+     <></>
+    }</h3>
         <h3>I travelled {flights} miles by plane</h3>
     </div>
     <form

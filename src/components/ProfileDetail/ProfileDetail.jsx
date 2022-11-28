@@ -6,7 +6,7 @@ function ProfileDetail({user}) {
     <tr>
       <td>{user.profile_name}</td>
       <td>
-        <Link to={`/profile/${user.id}/edit`}>
+        <Link to={`/users/${user.id}/edit`}>
           🖊️ Edit
         </Link>
       </td>

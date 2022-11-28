@@ -45,9 +45,9 @@ function Shopping () {
           label="shop"
           onChange={(evt)=> setShop(evt.target.value)}
         >
-          <MenuItem value={10}>I shopped local and thrifty</MenuItem>
-          <MenuItem value={20}>I stocked up on essentials</MenuItem>
-          <MenuItem value={30}>I raided the mall</MenuItem>
+          <MenuItem value={3}>I shopped local and thrifty</MenuItem>
+          <MenuItem value={5}>I stocked up on essentials</MenuItem>
+          <MenuItem value={6}>I raided the mall</MenuItem>
  
   
         </Select>

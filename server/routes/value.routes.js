@@ -13,7 +13,7 @@ router.post('/', (req, res)=> {
     INSERT INTO "values"
     ("user_id", "Residence", "Vehicle", "WorkTransport", "Distance", "Transport","Meals", "Takeout", "Shopping", "Flights")
     VALUES
-    ($1, $2, $3, $4, $5, $6, $7, $8, $9);
+    ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10);
   `;
 
 

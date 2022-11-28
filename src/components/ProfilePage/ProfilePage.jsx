@@ -68,7 +68,11 @@ function ProfilePage() {
       <h4>Profile</h4>
 
       <button>Edit Profile</button>
-      <p> I drive a: {vehicle} </p>
+      <p> I drive a: {vehicle === 1 ?
+       <p>Conventional Car</p>
+      :
+     <></>
+    }  </p>
       <p> 
         I live in a(n): {residence === 10 ?
        <p>apartment</p>
@@ -87,7 +91,11 @@ function ProfilePage() {
     </p>
 
       <p> I live {distance} miles away from my job </p>
-      <p> I am a {meat} </p>
+      <p> I am {meat === 30 ?
+       <p>Plant Based</p>
+      :
+     <></>
+    }  </p>
 
     </div>
   );

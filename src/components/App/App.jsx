@@ -35,10 +35,11 @@ import Takeout from '../Takeout/Takeout';
 import Flights from '../Flights/Flights';
 import Total from '../Total/Total';
 import ReviewAnswers from '../ReviewAnswers/ReviewAnswers';
-import UserProfileForm from '../ProfileEdit/ProfileEdit';
+
 import ProfileDetail from '../ProfileDetail/ProfileDetail';
 import Calendar from '../Calendar/Calendar';
 import CalendarItem from '../CalendarItem/CalendarItem';
+import UserProfileForm from '../ProfileEdit/ProfileEdit';
 
 import './App.css';
 
@@ -130,14 +131,9 @@ function App() {
             <Residence />
   
           </ProtectedRoute>
-          <ProtectedRoute
-            // logged in shows InfoPage else shows LoginPage
-            exact
-            path="/profile/:id/edit"
-          >
-            <UserProfileForm />
+
   
-          </ProtectedRoute>
+       
 
           <ProtectedRoute
             // logged in shows InfoPage else shows LoginPage
@@ -260,6 +256,12 @@ function App() {
             <WeeklyItem />
 
           </ProtectedRoute>
+          <ProtectedRoute 
+                    exact
+                    path="/user/:id/edit"
+                >
+                    <UserProfileForm />
+                </ProtectedRoute>
           {/* <ProtectedRoute
   
             exact

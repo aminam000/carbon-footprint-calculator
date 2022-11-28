@@ -32,6 +32,70 @@ router.post('/register', (req, res, next) => {
     });
 });
 
+// GET students
+router.get('/', (req, res) => {
+  // Get all of the students in the table
+  const sqlText = `SELECT * FROM students ORDER BY id ASC`;
+  pool.query(sqlText)
+      .then((result) => {
+          res.send(result.rows);
+      })
+      .catch((error) => {
+          console.log(`Error making database query ${sqlText}`, error);
+          res.sendStatus(500);
+      });
+});
+
+// GET /students/37
+router.get('/:id', (req, res) => {
+  const id = req.params.id;
+  // Get all of the students in the table
+  const sqlText = `
+      SELECT * FROM users 
+      WHERE id = $1
+      ORDER BY id ASC;
+  `;
+  const sqlParams = [id]; // $1 = req.params.id
+  pool.query(sqlText, sqlParams)
+      .then((result) => {
+          res.send(result.rows[0]);   
+      })
+      .catch((error) => {
+          console.log(`Error making database query ${sqlText}`, error);
+          res.sendStatus(500);
+      });
+});
+
+router.put('/:id', (req, res) => {
+  // Update this single student
+  const idToUpdate = req.params.id;
+  const sqlText = `UPDATE users SET profile_name = $1 WHERE id = $2`;
+  pool.query(sqlText, [req.body.profile_name, idToUpdate])
+      .then((result) => {
+          res.sendStatus(200);
+      })
+      .catch((error) => {
+          console.log(`Error making database query ${sqlText}`, error);
+          res.sendStatus(500);
+      });
+});
+
+// POST students
+router.post('/', (req, res) => {
+  console.log(req.body);
+  const newUser = req.body.github_name;
+  const sqlText = `INSERT INTO users (profile_name) VALUES ($1)`;
+
+  pool.query(sqlText, [newUser])
+      .then((result) => {
+          res.sendStatus(201);
+      })
+      .catch((error) => {
+          console.log(`Error making database query ${sqlText}`, error);
+          res.sendStatus(500);
+      });
+});
+
 // Handles login form authenticate/login POST
 // userStrategy.authenticate('local') is middleware that we run on this route
 // this middleware will run our POST if successful

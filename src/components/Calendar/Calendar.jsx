@@ -15,19 +15,19 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 const data = [
   {
     name: '10/30-11/05',
-    lbs: 4000
+    pounds: 105,
   },
   {
     name: "11/06-11/12",
-    lbs: 1000,
+    pounds: 100,
   },
   {
     name: "11/13-11/19",
-    lbs: 4000,
+    pounds: 120,
   },
   {
     name: "11/20-11/26",
-    lbs: 37622,
+    pounds: 108,
   },
 ];
     
@@ -53,7 +53,7 @@ function Calendar() {
           <XAxis dataKey="name" tick={{fill:"#000000"}}/>
           <YAxis tick={{fill:"#000000"}} />
           <Tooltip contentStyle={{ backgroundColor: "#8884d8", color: "#fff" }} itemStyle={{ color: "#fff" }} cursor={false}/>
-          <Line type="monotone" dataKey="lbs" stroke="#8884d8" strokeWidth="5" dot={{fill:"#2e4355",stroke:"#8884d8",strokeWidth: 2,r:5}} activeDot={{fill:"#2e4355",stroke:"#8884d8",strokeWidth: 5,r:10}} />
+          <Line type="monotone" dataKey="pounds" stroke="#8884d8" strokeWidth="5" dot={{fill:"#2e4355",stroke:"#8884d8",strokeWidth: 2,r:5}} activeDot={{fill:"#2e4355",stroke:"#8884d8",strokeWidth: 5,r:10}} />
           
         </LineChart>
       </ResponsiveContainer>

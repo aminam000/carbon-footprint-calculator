@@ -45,11 +45,11 @@ function Takeout () {
           label="takeout"
           onChange={(evt)=> setTakeout(evt.target.value)}
         >
-            <MenuItem value={10}>12-15 times</MenuItem>
-        <MenuItem value={10}>9-12 times</MenuItem>
-          <MenuItem value={10}>6-9 times</MenuItem>
-          <MenuItem value={20}>3-6 times</MenuItem>
-          <MenuItem value={30}>1-3 times</MenuItem>
+            <MenuItem value={60}>12-15 times</MenuItem>
+        <MenuItem value={50}>9-12 times</MenuItem>
+          <MenuItem value={40}>6-9 times</MenuItem>
+          <MenuItem value={30}>3-6 times</MenuItem>
+          <MenuItem value={20}>1-3 times</MenuItem>
           <MenuItem value={10}>0 times</MenuItem>
   
         </Select>

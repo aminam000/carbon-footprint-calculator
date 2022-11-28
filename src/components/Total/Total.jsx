@@ -60,15 +60,15 @@ const Total = (parseFloat(residence)+parseFloat(vehicle)+parseFloat(worktrip)+pa
 console.log('the total carbon footprint after review is', Total);
     //onclick event to post data
 
-let TotalFootprint = Total;
+
 
     const onSubmit = (event) => {
         event.preventDefault();
 
         axios({
             method: 'POST',
-            url: '/total',
-            data: TotalFootprint
+            url: '/values',
+            data: values
        
         })
         .then((response)=> {
