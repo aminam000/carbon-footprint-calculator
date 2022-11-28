@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import CreateCalculation from '../CreateCalculation/CreateCalculation';
 import Next from '../Next/Next';
+import './Calculate.css';
 
 import Typography from '@mui/material/Typography';
 
@@ -32,7 +33,7 @@ console.log('calcReducer------>',weeks)
     return(
         <>
         <h1>Welcome to Big Foot</h1>
-        <p>Big Foot uses information about your daily living habits to calculate your carbon footprint. Keep track of your weekly carbon emissions and calculate your carbon footprint for the week by answering the questions below. </p>
+        <p>Big Foot uses information about your daily living habits to calculate your carbon footprint. Keep track of your weekly carbon emissions and calculate your carbon footprint for the week by taking our survey. </p>
         <Next className="btn" />
         
         {/* <CreateCalculation />

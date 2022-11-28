@@ -1,72 +1,64 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+import React from 'react';
+import { useEffect } from 'react';
+import { useHistory, Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import CalendarItem from '../CalendarItem/CalendarItem';
+import axios from 'axios';
+import './Calendar.css';
 
 
-import Typography from '@mui/material/Typography';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
-
-function Calculate() {
-    const dispatch = useDispatch();
-    const history = useHistory();
-    const weeks = useSelector(store=>store.insertReducer)
-
-    const currentWeek = (event) => {
-      const week = event.target.getAttribute ('week');
-      const calc = event.target.getAttribute('pounds of CO2');
-      const choices =event.target.getAttribute('choice');
-
-        dispatch({
-          type: 'CURRENT_DATA',
-          payload: {
-            name,genres,summary,image
-          },
-          
-        });
-        history.push('/CurrentData')
-console.log('searchReducer------>',weeks)
-    }
-
+// const total = useSelector((store)=>{
+//   return store.total
+// })
+const data = [
+  {
+    name: '10/30-11/05',
+    lbs: 4000
+  },
+  {
+    name: "11/06-11/12",
+    lbs: 1000,
+  },
+  {
+    name: "11/13-11/19",
+    lbs: 4000,
+  },
+  {
+    name: "11/20-11/26",
+    lbs: 37622,
+  },
+];
     
-    return(
-        <>
-        <Search />
-        <div> 
-          {weeks && 
-          weeks.map((item)=>{
-            let push = item.weeks.week && item.week.calc
-            console.log('This weeks info is:', item.weeks.week)
-           
-            return(
-                <>
-              
-              <div key={item.id}>
-        <h3 className= "title">{item.weeks.name}</h3>
-        <img className= "search_img" src={push} />
-        <Typography variant="h5" className= "genre">{item.weeks.genres}</Typography>
-        
-        <Typography align="center" className= "summary" dangerouslySetInnerHTML={{__html: item.weeks.summary}}>
-          </Typography>
-        
+function Calendar() {
 
-        <button 
-                  name={item.weeks.week}
-                  genres={item.weeks.calc}
-                  summary={item.weeks.choice}
-                  image={push}
-                  className="btn btn-block" onClick={Currentwatch}
-        > Calculate your results 
-        </button>
 
-                  </div>
-                </>
-             
-            )
-          })
-          }
-
-        </div>
-        </>
-    )
-}
-export default Calculate;
+    return (
+      <>
+        <h2>  Weekly Carbon Footprint</h2>
+        <ResponsiveContainer width="90%" aspect={3}>
+        <LineChart
+          width={500}
+          height={300}
+          data={data}
+          margin={{
+            top: 15,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}
+        >
+          <CartesianGrid  horizontal="true" vertical="" stroke="#243240"/>
+          <XAxis dataKey="name" tick={{fill:"#000000"}}/>
+          <YAxis tick={{fill:"#000000"}} />
+          <Tooltip contentStyle={{ backgroundColor: "#8884d8", color: "#fff" }} itemStyle={{ color: "#fff" }} cursor={false}/>
+          <Line type="monotone" dataKey="lbs" stroke="#8884d8" strokeWidth="5" dot={{fill:"#2e4355",stroke:"#8884d8",strokeWidth: 2,r:5}} activeDot={{fill:"#2e4355",stroke:"#8884d8",strokeWidth: 5,r:10}} />
+          
+        </LineChart>
+      </ResponsiveContainer>
+    </>
+    );
+  }
+  
+  export default Calendar;

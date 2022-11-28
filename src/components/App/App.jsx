@@ -35,6 +35,10 @@ import Takeout from '../Takeout/Takeout';
 import Flights from '../Flights/Flights';
 import Total from '../Total/Total';
 import ReviewAnswers from '../ReviewAnswers/ReviewAnswers';
+import UserProfileForm from '../ProfileEdit/ProfileEdit';
+import ProfileDetail from '../ProfileDetail/ProfileDetail';
+import Calendar from '../Calendar/Calendar';
+import CalendarItem from '../CalendarItem/CalendarItem';
 
 import './App.css';
 
@@ -96,6 +100,23 @@ function App() {
           <ProtectedRoute
             // logged in shows InfoPage else shows LoginPage
             exact
+            path="/Week"
+          >
+            <CalendarItem />
+  
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows UserPage else shows LoginPage
+            exact
+            path="/calendar"
+          >
+            <Calendar />
+          </ProtectedRoute>
+
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
             path="/CreateCalculate"
           >
             <CreateCalculation />
@@ -107,6 +128,14 @@ function App() {
             path="/Residence"
           >
             <Residence />
+  
+          </ProtectedRoute>
+          <ProtectedRoute
+            // logged in shows InfoPage else shows LoginPage
+            exact
+            path="/profile/:id/edit"
+          >
+            <UserProfileForm />
   
           </ProtectedRoute>
 
@@ -195,6 +224,7 @@ function App() {
           >
             <Total /> 
           </ProtectedRoute>
+
 
           <ProtectedRoute
   

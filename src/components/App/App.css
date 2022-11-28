@@ -5,8 +5,10 @@ body,
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin: 0px;
+  background-color: #DDFFDD;
 }
 
 img {
@@ -37,6 +39,7 @@ Button
   font-size: 1.1rem;
   outline: 0;
   cursor: pointer;
+
 }
 
 .btn_sizeMin {
@@ -110,3 +113,5 @@ input {
   margin: 5px;
   margin-bottom: 10px;
 }
+
+

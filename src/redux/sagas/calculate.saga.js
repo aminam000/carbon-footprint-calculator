@@ -6,7 +6,7 @@ function* fetchData() {
   try {
     const response = yield axios({
       method: "GET",
-      url: "/api/calculate",
+      url: "/choices",
     });
     console.log("get all data", response.data);
     yield put({
@@ -22,7 +22,7 @@ function* addData(action) {
   console.log('in add data', action.payload)
   yield axios({
     method: "POST",
-    url: "/api/calculate",
+    url: "/values",
     data: action.payload,
   });
 }
@@ -31,7 +31,7 @@ function* deleteData(action) {
   try {
     const response = yield axios({
       method: "DELETE",
-      url: `/api/calculate/${action.payload}`,
+      url: `/values/${action.payload}`,
     });
     yield put({
       type: "FETCH_DATA",
@@ -45,7 +45,7 @@ function* updateData(action) {
   try {
     const response = yield axios({
       method: "PUT",
-      url: `/api/calculate/${action.payload}`,
+      url: `/values/${action.payload}`,
     });
     yield put({
       type: "SET_DATA",
@@ -60,7 +60,7 @@ function* fetchCompleted() {
     try {
       const response = yield axios({
         method: 'GET',
-        url: `/api/completed`,
+        url: `/total`,
       });
       console.log('GET Completed cALCULATION:', response.data);
       yield put({ type: 'SET_UPDATED_CALC', payload: response.data });
@@ -76,7 +76,7 @@ function* fetchCompleted() {
     try {
       const response = yield axios({
         method: 'PUT',
-        url: `/api/calculate/${action.payload}`,
+        url: `/total/${action.payload}`,
       
       })
       yield put({

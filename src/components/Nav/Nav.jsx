@@ -31,20 +31,20 @@ function Nav() {
               Profile
             </Link>
             <Link className="navLink" to="/calendar">
-              Calendar
+              Weekly Stats
             </Link>
             
-            <Link className="navLink" to="/info">
+            {/* <Link className="navLink" to="/info">
               Info Page
-            </Link>
+            </Link> */}
 
             <LogOutButton className="navLink" />
           </>
         )}
-
+{/* 
         <Link className="navLink" to="/about">
           About
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

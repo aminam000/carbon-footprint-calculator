@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 require('dotenv').config();
 const router = express.Router();
 const axios = require('axios');
-
+const profile = require('./routes/profile.router')
 
 const app = express();
 
@@ -13,6 +13,7 @@ const passport = require('./strategies/user.strategy');
 // Route includes
 const valuerouter = require('./routes/value.routes')
 const userRouter = require('./routes/user.router');
+const totalrouter = require('./routes/total.router')
 // const calcRouter = require('./routes/calculated.router');
 // const choiceRouter = require('./routes/choices.router')
 // Body parser middleware
@@ -34,6 +35,8 @@ app.use('/api/user', userRouter);
 // app.use('/api/calculate', calcRouter);
 // app.use('/api/:choices', choiceRouter);
 app.use('/values', valuerouter);
+app.use('/total' , totalrouter);
+app.use('/profile', profile);
 // Serve static files
 app.use(express.static('build'));
 

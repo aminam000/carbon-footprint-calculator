@@ -53,9 +53,11 @@ function ReviewAnswers (  ) {
        takeout,
        shop,
        flights
-    }
+}
 
 
+const Total = (parseFloat(residence)+parseFloat(vehicle)+parseFloat(worktrip)+parseFloat(distance)+parseFloat(othertrips)+parseFloat(meat)+parseFloat(takeout)+parseFloat(shop)+parseFloat(flights))
+console.log('the total carbon footprint is', Total);
     //onclick event to post data
 
     const onSubmit = (event) => {
@@ -73,7 +75,7 @@ function ReviewAnswers (  ) {
         .catch((error)=> {
             console.log('err in post values', error)
         })
-        history.push('/Submit')
+        history.push('/Total')
     }
 
 //return (display)
