@@ -1,9 +1,11 @@
+// import { urlencoded } from 'express';
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-//import './LandingPage.css';
-import BackgroundImagePage from '../Background/Background';
+import './LandingPage.css';
+// import BackgroundImagePage from '../Background/Background';
 // import Landing from "./public/images/Landing.jpg";
 //import pic from ".images/Landing.jpg";
+//import image from "./public/images/Landing.jpg"
 
 // CUSTOM COMPONENTS
 import RegisterForm from '../RegisterForm/RegisterForm';
@@ -17,7 +19,7 @@ function LandingPage() {
   };
 
   return (
-    <div 
+    <div id="HomeBackground" 
     className="container">
       <h2>{heading}</h2>
 
@@ -35,9 +37,7 @@ function LandingPage() {
 
           </p>
         </div>
-        <style>
-        <img src={pic} />
-    </style>
+        
   
         <div className="grid-col grid-col_4">
           <RegisterForm />

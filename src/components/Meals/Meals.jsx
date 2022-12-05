@@ -45,9 +45,9 @@ function Meals () {
           label="meat"
           onChange={(evt)=> setMeat(evt.target.value)}
         >
-          <MenuItem value={10}>Omnivorous</MenuItem>
-          <MenuItem value={20}>Vegetarian</MenuItem>
-          <MenuItem value={30}>Plantbased</MenuItem>
+          <MenuItem value={40}>Omnivorous</MenuItem>
+          <MenuItem value={30}>Vegetarian</MenuItem>
+          <MenuItem value={20}>Plantbased</MenuItem>
           <MenuItem value={10}>Vegan</MenuItem>
   
         </Select>

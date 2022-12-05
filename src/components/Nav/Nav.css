@@ -22,10 +22,11 @@
   
   
   
+  
 }
-.nav-title h2{
+/* .nav-title h2{
   text-align: center;
-}
+} */
 
 .navLink {
   /* display: inline-block;
@@ -49,11 +50,12 @@
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: inline-flex;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 16px;
     bottom: 10px;
+    
  
 
 }
@@ -63,12 +65,17 @@
 }
 
 
-.nav {
-  position: relative;
-}
+
 /* .navLink {
  position: absolute;
  bottom: 10px;
  width: 100%;
  background:  #cccccc;
  } */
+
+ .nav h2{
+  margin-left: 15px;
+ }
+
+
+

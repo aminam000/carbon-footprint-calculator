@@ -4,6 +4,28 @@ const pool =  require('../modules/pool');
 const axios = require('axios');
 
 
+router.get('/', (req, res)=> {
+
+  console.log('post values', req.body);
+
+  const sqlText = `
+    SELECT * FROM "values" LIMIT 1;
+
+
+  `;
+     // WHERE user_id = $1; 
+  pool
+  .query(sqlText)
+    .then( result => {
+      res.send(result.rows);
+    })
+    .catch(err => {
+      console.log('ERROR: Get values', err);
+      res.sendStatus(500)
+    })
+
+});
+
 
 router.post('/', (req, res)=> {
   const getValues = req.body;
@@ -43,6 +65,30 @@ router.post('/', (req, res)=> {
             res.sendStatus(500);
         })
 })
+
+router.delete('/delete/:id', (req, res)=> {
+  console.log('in delete values', req.body);
+
+  const sqlText = `
+    DELETE FROM "values" 
+    where id = $1;
+
+
+  `;
+
+  const sqlValues = [req.params.id]
+     // WHERE user_id = $1; 
+  pool
+  .query(sqlText, sqlValues)
+    .then( result => {
+      res.sendStatus(200);
+    })
+    .catch(err => {
+      console.log('ERROR: in delete values', err);
+      res.sendStatus(500)
+    })
+})
+
 
 
 module.exports = router;

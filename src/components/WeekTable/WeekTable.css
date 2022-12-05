@@ -1,0 +1,13 @@
+tr{
+    display: flex;
+    flex-direction: column;
+  
+}
+
+table{
+    display: flex;
+}
+
+table{
+    margin-left: 50px;
+}

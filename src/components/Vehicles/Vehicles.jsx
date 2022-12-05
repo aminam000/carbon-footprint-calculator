@@ -148,16 +148,17 @@ function Vehicles(){
           label="Vehicle"
           onChange={(evt)=> setVehicle(evt.target.value)}
         >
-<MenuItem value={1}>Conventional Car</MenuItem>
-            <MenuItem value={2}>Hybrid Car</MenuItem>
-            <MenuItem value={3}>Plug-In Hybrid Car</MenuItem>
+<MenuItem value={7}>Conventional Car</MenuItem>
+            <MenuItem value={6}>Hybrid Car</MenuItem>
+            <MenuItem value={5}>Plug-In Hybrid Car</MenuItem>
             <MenuItem value={4}>Electric Car</MenuItem>
-           <MenuItem value={5}>Motorbike</MenuItem>
-        <MenuItem value={6}>Bike</MenuItem>
-                     <MenuItem value={7}>I don't own any vehicles</MenuItem>
+           <MenuItem value={3}>Motorbike</MenuItem>
+        <MenuItem value={2}>Bike</MenuItem>
+                     <MenuItem value={1}>I don't own any vehicles</MenuItem>
         </Select>
         </FormControl>
         <button type='submit'>Next</button>
+        <button>Save To Profile</button>
         </form>
       
     </Box>

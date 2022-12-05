@@ -27,7 +27,7 @@ function RegisterForm() {
           {errors.registrationMessage}
         </h3>
       )}
-      <div>
+      <div >
         <label htmlFor="username">
           Username:
           <input

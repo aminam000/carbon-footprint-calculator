@@ -1,4 +1,6 @@
 import React from 'react';
+import './AboutPage.css';
+//import image from './src/components/AboutPage/qrcode_40795144_41efa1e48eacf230a1ffbaab8f41aef0 (1).png';
 
 // This is one of our simplest components
 // It doesn't have local state,
@@ -11,13 +13,16 @@ function AboutPage() {
       <div>
         <p>Thank you to Prime and the Ramirez Cohort!
         </p>
-        <p>Technologies used:
+        <p>Technologies used:</p>
           <ul>
             <li>
               Javascript
             </li>
             <li>
-              React and React Libraries
+              React 
+            </li>
+            <li>
+              Rechart
             </li>
             <li>
              SQL
@@ -26,7 +31,8 @@ function AboutPage() {
              Material UI
             </li>
           </ul>
-        </p>
+        <p>Connect with me on LinkedIn</p>
+   
       </div>
     </div>
   );

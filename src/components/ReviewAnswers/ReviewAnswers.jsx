@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import './ReviewAnswer.css'
 
+
 import { useSelector } from 'react-redux';
 
 import { useHistory } from 'react-router-dom';
@@ -61,22 +62,12 @@ const Total = (parseFloat(residence)+parseFloat(vehicle)+parseFloat(worktrip)+pa
 console.log('the total carbon footprint is', Total);
     //onclick event to post data
 
-    const onSubmit = (event) => {
-        event.preventDefault();
 
-        axios({
-            method: 'POST',
-            url: '/values',
-            data: values
-       
-        })
-        .then((response)=> {
-            console.log('success in post values', response)
-        })
-        .catch((error)=> {
-            console.log('err in post values', error)
-        })
-        history.push('/Total')
+    const getAnswers = () => {
+     
+      console.log('inside Review')
+  
+      history.push('/Total');
     }
 
 //return (display)
@@ -94,13 +85,17 @@ return (
      <></>
     } 
   </h3>
-        <h3>I drive a(n): {vehicle === 1 ?
+        <h3>I drive a(n): {vehicle === 7 ?
        <p>Conventional Car</p>
       :
      <></>
-    }</h3>
+    }  {vehicle === 4 ?
+      <p>Electric Car</p>
+     :
+    <></>
+   }</h3>
         <h3>I live {distance} miles away from my job</h3>
-        <h3>I am {meat === 30 ? <p>Plant Based</p>
+        <h3>I am {meat === 20 ? <p>Plant Based</p>
       :
      <></>
     }</h3>
@@ -116,10 +111,12 @@ return (
     }</h3>
         <h3>I travelled {flights} miles by plane</h3>
     </div>
-    <form
-        onSubmit={onSubmit}>
-            <button>Submit</button>
-    </form>
+    <button onClick={getAnswers}>Submit</button>
+    {/* //<form>
+        // onSubmit={onSubmit}>
+     
+           
+    // </form> */}
     </>
 )
 }

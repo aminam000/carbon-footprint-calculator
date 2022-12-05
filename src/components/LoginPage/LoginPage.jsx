@@ -6,7 +6,7 @@ function LoginPage() {
   const history = useHistory();
 
   return (
-    <div>
+    <div id="HomeBackground" >
       <LoginForm />
 
       <center>
@@ -19,8 +19,10 @@ function LoginPage() {
         >
           Register
         </button>
+   
       </center>
     </div>
+   
   );
 }
 

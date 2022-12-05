@@ -23,7 +23,7 @@ import Calculate from '../Calculate/Calculate';
 import CreateCalculation from '../CreateCalculation/CreateCalculation';
 import ProfilePage from '../ProfilePage/ProfilePage';
 import WeeklyItem from '../WeeklyItem/WeeklyItem';
-import WeeklyList from '../WeeklyList/WeeklyList';
+import Week from '../WeekTable/WeekTable';
 import Vehicles from '../Vehicles/Vehicles';
 import Residence from '../Residence/Residence';
 import Transport from '../Transport.jsx/Transport';
@@ -35,13 +35,14 @@ import Takeout from '../Takeout/Takeout';
 import Flights from '../Flights/Flights';
 import Total from '../Total/Total';
 import ReviewAnswers from '../ReviewAnswers/ReviewAnswers';
-
+import WeekEdit from '../WeekEdit/WeekEdit';
 import ProfileDetail from '../ProfileDetail/ProfileDetail';
 import Calendar from '../Calendar/Calendar';
 import CalendarItem from '../CalendarItem/CalendarItem';
 import UserProfileForm from '../ProfileEdit/ProfileEdit';
 
 import './App.css';
+import WeekTable from '../WeekTable/WeekTable';
 
 
 function App() {
@@ -98,14 +99,9 @@ function App() {
   
           </ProtectedRoute>
 
-          <ProtectedRoute
-            // logged in shows InfoPage else shows LoginPage
-            exact
-            path="/Week"
-          >
-            <CalendarItem />
   
-          </ProtectedRoute>
+  
+       
 
           <ProtectedRoute
             // logged in shows UserPage else shows LoginPage
@@ -222,6 +218,15 @@ function App() {
           </ProtectedRoute>
 
 
+
+          <ProtectedRoute
+            // logged in shows UserPage else shows LoginPage
+            exact
+            path="/Edit"
+          >
+            <WeekEdit />
+          </ProtectedRoute>
+
           <ProtectedRoute
   
             exact
@@ -242,9 +247,9 @@ function App() {
           <ProtectedRoute
   
             exact
-            path="/WeeklyList"
+            path="/Week"
           >
-            <WeeklyList />
+            <WeekTable />
 
           </ProtectedRoute>
 
@@ -256,12 +261,12 @@ function App() {
             <WeeklyItem />
 
           </ProtectedRoute>
-          <ProtectedRoute 
+          {/* <ProtectedRoute 
                     exact
                     path="/user/:id/edit"
                 >
-                    <UserProfileForm />
-                </ProtectedRoute>
+                    <ProfileForm />
+                </ProtectedRoute> */}
           {/* <ProtectedRoute
   
             exact

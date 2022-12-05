@@ -36,6 +36,15 @@ function Distance(){
         })
         history.push('/transport');
     }
+    const saveDistance = () => {
+        
+        console.log('inside saveDistance', distance)
+        dispatch({
+            type: 'GET_DISTANCE',
+            payload: distance
+        })
+        history.push('/profile');
+    }
 
 
     return(
@@ -55,6 +64,7 @@ function Distance(){
                         </input>
                         <button type='submitBtn'>Next</button>
                 </form> 
+                <button onClick={saveDistance}>Save To Profile</button>
  
           </header>
 

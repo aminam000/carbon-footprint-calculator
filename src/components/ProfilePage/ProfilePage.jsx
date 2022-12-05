@@ -13,6 +13,8 @@ import { useHistory } from 'react-router-dom';
 function ProfilePage() {
   const history = useHistory();
 
+
+
     const residence = useSelector((store)=>{
         return store.residence
     })
@@ -58,7 +60,13 @@ function ProfilePage() {
     }
 
   
- 
+ const editProfile = () => {
+  // removeData();
+
+      console.log('inside profile')
+  
+      history.push('/Residence');
+    }
 
 
   
@@ -67,12 +75,16 @@ function ProfilePage() {
     <div className="container">
       <h4>Profile</h4>
 
-      <button>Edit Profile</button>
-      <p> I drive a: {vehicle === 1 ?
+      
+      <p> I drive a: {vehicle === 7 ?
        <p>Conventional Car</p>
       :
      <></>
-    }  </p>
+    }  {vehicle === 4 ?
+      <p>Electric Car</p>
+     :
+    <></>
+   }</p>
       <p> 
         I live in a(n): {residence === 10 ?
        <p>apartment</p>
@@ -91,13 +103,18 @@ function ProfilePage() {
     </p>
 
       <p> I live {distance} miles away from my job </p>
-      <p> I am {meat === 30 ?
+      <p> I am {meat === 20 ?
        <p>Plant Based</p>
       :
      <></>
-    }  </p>
-
+    } {meat === 10 ?
+      <p>Vegan</p>
+     :
+    <></>
+   } </p>
+    <button onClick={editProfile}>Edit Profile</button>
     </div>
+
   );
 }
 
